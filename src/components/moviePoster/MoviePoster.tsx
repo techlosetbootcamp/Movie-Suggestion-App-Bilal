@@ -6,10 +6,10 @@ const MoviePoster: React.FC<MoviePosterProps> = ({
   movieId,
   rating,
 }) => {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    history(`/movie/${movieId}`);
+    navigate(`/movie/${movieId}`);
   };
  
   return (
