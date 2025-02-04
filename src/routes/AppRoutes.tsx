@@ -2,13 +2,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/home/Home";
 import Search from "../pages/search/Search"; 
 import Movie from "../pages/movies/Movie";
-import { useDispatch } from "react-redux";
 import { searchMovies } from "../redux/slice/searchSlice";
-import { AppDispatch } from "../redux/store";
+import { useAppDispatch } from "../hooks/useAppDispatch/useAppDispatch";
 import Navbar from "../components/navbar/Navbar";
 
 function AppRoutes() {
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useAppDispatch();
 
   const handleSearchChange = (query: string) => {
     dispatch(searchMovies(query));

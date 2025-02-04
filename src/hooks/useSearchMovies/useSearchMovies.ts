@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { searchMovies, selectAllSearch, selectIsLoading } from "../../redux/slice/searchSlice";
-import { AppDispatch } from "../../redux/store";
 import { Movie } from "../../types/types";
+import { useAppDispatch } from "../useAppDispatch/useAppDispatch";
+import { useAppSelector } from "../useAppSelector/useAppSelector";
 
 export function useSearchMovies(): {
   query: string;
@@ -11,10 +11,10 @@ export function useSearchMovies(): {
   searches: Movie[];
   isLoading: boolean;
 } {
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useAppDispatch();
   const location = useLocation();
-  const searches = useSelector(selectAllSearch) || [];
-  const isLoading = useSelector(selectIsLoading);
+  const searches = useAppSelector(selectAllSearch) || [];
+  const isLoading = useAppSelector(selectIsLoading);
   const [query, setQuery] = useState("");
 
   useEffect(() => {

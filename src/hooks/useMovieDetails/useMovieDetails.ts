@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {  useSelector } from "react-redux";
+import { useAppSelector } from "../useAppSelector/useAppSelector";
 import { useParams } from "react-router-dom";
 import { selectAllMovies, selectIsLoading } from "../../redux/slice/movieSlice";
 import { selectAllSearch } from "../../redux/slice/searchSlice";
@@ -8,9 +8,9 @@ import instance from "../../constant/instance";
 
 export function useMovieDetails(): { movieData: Movie | null; isLoading: boolean } {
   const { movieId } = useParams();
-  const movies = useSelector(selectAllMovies);
-  const searchResults = useSelector(selectAllSearch);
-  const isLoading = useSelector(selectIsLoading);
+  const movies = useAppSelector(selectAllMovies);
+  const searchResults = useAppSelector(selectAllSearch);
+  const isLoading = useAppSelector(selectIsLoading);
   const [movieData, setMovieData] = useState<Movie | null>(null);
 
   useEffect(() => {
