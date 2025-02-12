@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import instance from "../../constant/instance";
+import instance from "../../utils/instance";
 import { SearchMovie } from "../../types/types";
 import { SearchState } from "../../types/types";
 

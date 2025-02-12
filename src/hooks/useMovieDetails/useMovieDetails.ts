@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { selectAllMovies, selectIsLoading } from "../../redux/slice/movieSlice";
 import { selectAllSearch } from "../../redux/slice/searchSlice";
 import { Movie } from "../../types/types";
-import instance from "../../constant/instance";
+import instance from "../../utils/instance";
 
 export function useMovieDetails(): { movieData: Movie | null; isLoading: boolean } {
   const { movieId } = useParams();

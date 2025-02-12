@@ -7,7 +7,7 @@ module.exports = {
         caros: ["Caros-Bold", "sans-serif"],
       },
       colors:{
-        'gray': '#EBEAEA'
+        'gray': '#EBEAEA',
       }
     },
   },

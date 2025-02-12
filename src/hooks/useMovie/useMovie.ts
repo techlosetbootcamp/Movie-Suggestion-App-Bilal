@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Movie, Season } from "../../types/types";
-import instance from "../../constant/instance";
+import instance from "../../utils/instance";
 
 const useMovies = () => {
   const [movies, setMovies] = useState<Movie[]>([]);

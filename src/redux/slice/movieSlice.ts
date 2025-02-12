@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import instance from "../../constant/instance";
+import instance from "../../utils/instance";
 import { MovieState } from "../../types/types";
 
 export const fetchMovies = createAsyncThunk("movies/fetchMovies", async () => {
