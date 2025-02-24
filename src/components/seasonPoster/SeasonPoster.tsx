@@ -1,4 +1,5 @@
 import { SeasonPosterProps } from "../../types/types";
+import { Star } from 'lucide-react';
 
 const SeasonPoster: React.FC<SeasonPosterProps> = ({
   imageUrl,
@@ -19,8 +20,8 @@ const SeasonPoster: React.FC<SeasonPosterProps> = ({
       <div
         className={`absolute top-2 left-2 rounded-[20px] flex items-center space-x-1 p-2 bg-opacity-75 transition-opacity duration-300}`}
       >
-        <span className="text-white font-FONTSPRING-DEMO-Caros-Bold text-15px font-bold leading-9 letter-spacing-0 text-left ">
-          ⭐ {Math?.round(rating)}
+        <span className="flex justify-center items-center text-white font-FONTSPRING-DEMO-Caros-Bold text-15px font-bold leading-9 letter-spacing-0 text-left ">
+          <Star className="text-yellow-400"/> {Math?.round(rating)}
         </span>
       </div>
       <h3 className="font-bold text-4l leading-9 mt-2">{name}</h3>

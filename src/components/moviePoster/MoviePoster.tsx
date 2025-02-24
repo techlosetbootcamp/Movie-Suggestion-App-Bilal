@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { MoviePosterProps } from "../../types/types";
+import { Star } from "lucide-react";
 
 const MoviePoster: React.FC<MoviePosterProps> = ({
   imageUrl,
@@ -25,8 +26,8 @@ const MoviePoster: React.FC<MoviePosterProps> = ({
       <div
         className={`absolute top-0 left-0 flex items-center rounded-[20px] space-x-1 p-2 bg-opacity-75 transition-opacity duration-300}`}
       >
-        <span className="text-white font-FONTSPRING-DEMO-Caros-Bold text-15px font-bold leading-9 letter-spacing-0">
-          ⭐ {Math?.round(rating)}
+        <span className="flex justify-center items-center text-white font-FONTSPRING-DEMO-Caros-Bold text-15px font-bold leading-9 letter-spacing-0">
+        <Star className="text-yellow-400"/> {Math?.round(rating)}
         </span>
       </div>
     </div>

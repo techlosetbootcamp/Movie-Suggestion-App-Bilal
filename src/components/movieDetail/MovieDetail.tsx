@@ -1,6 +1,7 @@
 import Loader from "../../components/loader/Loader";
 import Icon from "../../assets/icons/Bookmark.png";
 import { useMovieDetails } from "../../hooks/useMovieDetails/useMovieDetails";
+import { Star } from "lucide-react";
 
 export default function MovieDetails() {
   const { movieData, isLoading } = useMovieDetails();
@@ -67,10 +68,9 @@ export default function MovieDetails() {
               <h3 className="text-[18px] font-bold font-roboto lg:ml-[-110px] ">
                 IMDB Rating
               </h3>
-              <span className="text-xl lg:ml-[-110px] ">
-                ⭐{Math.round(movieData?.vote_average)}
-              </span>{" "}
-              <span>/10</span>
+              <span className="text-xl lg:ml-[-110px] flex">
+              <Star className="text-yellow-400"/>{Math.round(movieData?.vote_average)}
+              /10</span>
             </div>
           </div>
           <div className="grid grid-cols-1 md:static relative ">
