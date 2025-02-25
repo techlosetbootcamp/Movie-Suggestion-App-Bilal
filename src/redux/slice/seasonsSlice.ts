@@ -38,7 +38,7 @@ const seasonSlice = createSlice({
 export const selectAllSeasons = (state: { seasons: SeasonState }) =>
   state.seasons?.seasons;
 export const selectIsLoading = (state: { seasons: SeasonState }) =>
-  state.seasons.status === "loading";
+  state.seasons?.status === "loading";
 
 export const { reducer: seasonsReducer } = seasonSlice;
 

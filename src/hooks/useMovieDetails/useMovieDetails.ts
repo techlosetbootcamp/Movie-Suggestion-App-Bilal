@@ -16,7 +16,7 @@ export function useMovieDetails(): { movieData: Movie | null; isLoading: boolean
   useEffect(() => {
     const fetchMovieDetails = async () => {
     
-      const movieFromState = [...movies, ...searchResults].find(
+      const movieFromState = [...movies, ...searchResults]?.find(
         (movie) => movie.id.toString() === movieId
       );
 

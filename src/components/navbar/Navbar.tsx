@@ -2,9 +2,10 @@ import React from "react";
 import { useSearch } from "../../hooks/useSearch/useSearch";
 import { NavbarProps } from "../../types/types";
 import BookmarkIcon from "../../assets/icons/Bookmark.png";
+import { Plus, Search } from "lucide-react";
 
 const Navbar: React.FC<NavbarProps> = ({
-  searchPlaceholder = "🔍 Search movies or series",
+  searchPlaceholder = " Search movies or series",
   showPlusButton,
 }) => {
   const {
@@ -33,7 +34,7 @@ const Navbar: React.FC<NavbarProps> = ({
             >
               {!isSearchVisible ? (
                 <span role="img" aria-label="Search Icon">
-                  🔍
+                  <Search/>
                 </span>
               ) : (
                 <span
@@ -41,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   aria-label="Search Icon"
                   className="text-[30px] text-gray-600 mb-2"
                 >
-                  +
+                  <Plus/>
                 </span>
               )}
             </button>

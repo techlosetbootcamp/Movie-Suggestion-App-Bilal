@@ -50,8 +50,8 @@ export const { reducer: searchReducer, actions } = searchSlice;
 export const { setSearches } = actions;
 
 export const selectAllSearch = (state: { search: SearchState }) =>
-  state.search.movies;
+  state.search?.movies;
 export const selectIsLoading = (state: { search: SearchState }) =>
-  state.search.status === "loading";
+  state.search?.status === "loading";
 
 export default searchSlice;
