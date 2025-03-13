@@ -32,6 +32,6 @@ export const useSearch = () => {
     toggleSearch,
     handleSearchChange,
     handleSearchSubmit,
-    navigate
+    navigate,
   };
 };

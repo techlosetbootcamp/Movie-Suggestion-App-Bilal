@@ -1,14 +1,18 @@
-import useMovies from "../../hooks/useMovie/useMovie";
+import useMovies from "../../hooks/useMovie";
 import MoviePoster from "../../components/moviePoster/MoviePoster";
 import Loader from "../loader/Loader";
 
 export default function Trending() {
-  const {movies,loading,error} = useMovies();
-  if(loading){
-    return <div><Loader/></div>
+  const { movies, loading, error } = useMovies();
+  if (loading) {
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
   }
-  if(error){
-    return <div>Error: {error}</div>
+  if (error) {
+    return <div>Error: {error}</div>;
   }
   return (
     <div className="col-span-12 sm:col-span-8 md:ms-5">

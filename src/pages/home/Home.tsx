@@ -1,11 +1,11 @@
 import PopularMovies from "../../components/popularMovies/PopularMovies";
-import Trending from "../../components/trending/trending"; 
+import Trending from "../../components/trending/trending";
 import PopularReleases from "../../components/popularReleases/PopularReleases";
 import Loader from "../../components/loader/Loader";
-import useMovies from "../../hooks/useMovie/useMovie";
+import useMovies from "../../hooks/useMovie";
 
 export default function Home() {
-const {loading}=useMovies()
+  const { loading } = useMovies();
   return (
     <div>
       <div className="container flex flex-col lg:ml-[80px] input:ml-[20px] ">

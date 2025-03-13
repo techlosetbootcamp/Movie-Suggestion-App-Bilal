@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Movie, Season } from "../../types/types";
-import instance from "../../utils/instance";
+import { Movie, Season } from "../types/types";
+import instance from "../utils/instance";
 
 const useMovies = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -11,11 +11,11 @@ const useMovies = () => {
   const fetchMovies = async () => {
     try {
       const [moviesResponse, seasonsResponse] = await Promise.all([
-        instance.get('/movie/popular'),
-        instance.get('/tv/popular')
+        instance.get("/movie/popular"),
+        instance.get("/tv/popular"),
       ]);
-      setMovies(moviesResponse.data.results);
-      setSeasons(seasonsResponse.data.results);
+      setMovies(moviesResponse.data?.results);
+      setSeasons(seasonsResponse.data?.results);
       setLoading(false);
     } catch {
       setError("Failed to fetch movies and TV shows");

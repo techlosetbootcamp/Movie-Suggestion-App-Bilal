@@ -1,4 +1,4 @@
-import useMovies from "../../hooks/useMovie/useMovie";
+import useMovies from "../../hooks/useMovie";
 import SeasonPoster from "../../components/seasonPoster/SeasonPoster";
 import Loader from "../loader/Loader";
 
@@ -25,7 +25,7 @@ export default function Seasons() {
             {Array.from({ length: 4 }, (_, index) => (
               <span
                 key={index}
-                className="p-[10px] cursor-pointer hover:bg-[#D2D2D2] flex flex-row rounded-[10px] lg:pl-[14.5px] lg:pt-[5px] lg:h-[43.27px] lg:w-[43.27px] bg-[#D9D9D9] text-black text-[20px]"
+                className="p-[10px] cursor-pointer hover:bg-lightGray flex flex-row rounded-[10px] lg:pl-[14.5px] lg:pt-[5px] lg:h-[43.27px] lg:w-[43.27px] bg-lightGray text-black text-[20px]"
               >
                 {index + 1}
               </span>

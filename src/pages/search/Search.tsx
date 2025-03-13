@@ -1,6 +1,6 @@
 import MoviePoster from "../../components/moviePoster/MoviePoster";
 import Loader from "../../components/loader/Loader";
-import { useSearchMovies } from "../../hooks/useSearchMovies/useSearchMovies";
+import { useSearchMovies } from "../../hooks/useSearchMovies";
 
 const Search = () => {
   const { query, searches, isLoading } = useSearchMovies();

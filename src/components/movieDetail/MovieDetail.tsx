@@ -1,6 +1,6 @@
 import Loader from "../../components/loader/Loader";
 import Icon from "../../assets/icons/Bookmark.png";
-import { useMovieDetails } from "../../hooks/useMovieDetails/useMovieDetails";
+import { useMovieDetails } from "../../hooks/useMovieDetails";
 import { Star } from "lucide-react";
 
 export default function MovieDetails() {
@@ -31,7 +31,7 @@ export default function MovieDetails() {
 
         <div className="col-span-1 flex flex-row justify-end p-10 sm:hidden">
           <button
-            className="bg-[#D9D9D9] hover:bg-[#D2D2D2] flex flex-row rounded-full p-4 cursor-pointer text-black "
+            className="bg-lightGray hover:bg-lightGray flex flex-row rounded-full p-4 cursor-pointer text-black "
             disabled={isLoading}
           >
             <img
@@ -69,8 +69,10 @@ export default function MovieDetails() {
                 IMDB Rating
               </h3>
               <span className="text-xl lg:ml-[-110px] flex">
-              <Star className="text-yellow-400"/>{Math.round(movieData?.vote_average)}
-              /10</span>
+                <Star className="text-yellow-400" />
+                {Math.round(movieData?.vote_average)}
+                /10
+              </span>
             </div>
           </div>
           <div className="grid grid-cols-1 md:static relative ">

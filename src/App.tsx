@@ -1,11 +1,11 @@
-import AppRoutes from './routes/AppRoutes'
+import AppRoutes from "./routes/AppRoutes";
 
 const App = () => {
   return (
-    <div className='bg-gray'>
-      <AppRoutes/>
+    <div className="bg-gray">
+      <AppRoutes />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

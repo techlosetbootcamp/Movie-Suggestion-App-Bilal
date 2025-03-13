@@ -1,15 +1,19 @@
-import useMovies from "../../hooks/useMovie/useMovie";
+import useMovies from "../../hooks/useMovie";
 import Loader from "../loader/Loader";
 import MoviePoster from "../moviePoster/MoviePoster";
 
 export default function PopularMovies() {
-  const {movies,loading,error} = useMovies();
-if(loading){
-  return <div><Loader/></div>
-}
-if(error){
-  return <div>Error: {error}</div>
-}
+  const { movies, loading, error } = useMovies();
+  if (loading) {
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
+  }
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
   return (
     <div className="col-span-12 sm:col-span-4 md:me-5">
       <h1 className="mb-[11px] mt-[37px] text-[20px] font-bold">

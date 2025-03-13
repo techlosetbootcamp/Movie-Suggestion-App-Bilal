@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { searchMovies, selectAllSearch, selectIsLoading } from "../../redux/slice/searchSlice";
-import { Movie } from "../../types/types";
-import { useAppDispatch } from "../useAppDispatch/useAppDispatch";
-import { useAppSelector } from "../useAppSelector/useAppSelector";
+import {
+  searchMovies,
+  selectAllSearch,
+  selectIsLoading,
+} from "../redux/slice/searchSlice";
+import { Movie } from "../types/types";
+import { useAppDispatch, useAppSelector } from "../redux/store";
 
 export function useSearchMovies(): {
   query: string;

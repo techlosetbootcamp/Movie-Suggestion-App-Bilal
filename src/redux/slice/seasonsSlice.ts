@@ -6,7 +6,7 @@ export const fetchSeries = createAsyncThunk("series/fetchSeries", async () => {
   try {
     const response = await instance.get("tv/popular?language=en-US&page=1");
     return response.data.results;
-  } catch  {
+  } catch {
     throw new Error("Failed to fetch series. Please try again later.");
   }
 });
