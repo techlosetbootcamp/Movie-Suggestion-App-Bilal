@@ -36,10 +36,10 @@ const moviesSlice = createSlice({
 });
 
 export const selectAllMovies = (state: { movies: MovieState }) =>
-  state.movies?.movies ?? [];
+  state.movies.movies ?? [];
 
 export const selectIsLoading = (state: { movies: MovieState }) =>
-  state.movies?.status === "loading";
+  state.movies.status === "loading";
 
 export const { reducer: moviesReducer } = moviesSlice;
 

@@ -8,7 +8,7 @@ export const useSearch = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const decodedQuery = decodeURIComponent(location.search.slice(7));
+    const decodedQuery = decodeURIComponent(location.search?.slice(7));
     setSearchQuery(decodedQuery || "");
   }, [location.search]);
 

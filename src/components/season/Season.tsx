@@ -33,7 +33,7 @@ export default function Seasons() {
           </div>
         </div>
         <div className="grid md:grid-cols-4 grid-cols-2 gap-4">
-          {seasons.slice(0, 20)?.map((season) => (
+          {seasons?.slice(0, 20)?.map((season) => (
             <div key={season.id}>
               <SeasonPoster
                 imageUrl={`https://image.tmdb.org/t/p/w500${season?.poster_path}`}

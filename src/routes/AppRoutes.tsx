@@ -14,7 +14,6 @@ function AppRoutes() {
   };
 
   return (
-    <div>
       <BrowserRouter>
         <Navbar onSearchChange={handleSearchChange} />
         <Routes>
@@ -23,7 +22,6 @@ function AppRoutes() {
           <Route path="/movie/:movieId" element={<Movie />} />
         </Routes>
       </BrowserRouter>
-    </div>
   );
 }
 

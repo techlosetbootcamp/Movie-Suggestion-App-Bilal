@@ -19,7 +19,7 @@ export function useMovieDetails(): {
   useEffect(() => {
     const fetchMovieDetails = async () => {
       const movieFromState = [...movies, ...searchResults]?.find(
-        (movie) => movie.id.toString() === movieId
+        (movie) => movie?.id.toString() === movieId
       );
 
       if (movieFromState) {
@@ -29,7 +29,7 @@ export function useMovieDetails(): {
           const response = await instance.get(
             `/movie/${movieId}?language=en-US`
           );
-          setMovieData(response.data);
+          setMovieData(response?.data);
         } catch (error) {
           console.error("Error fetching movie details:", error);
           setMovieData(null);

@@ -20,7 +20,7 @@ export default function PopularReleases() {
         Popular Releases
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-6 gap-[10px] mb-[85px] ">
-        {movies.slice(0, 18)?.map((movie) => (
+        {movies?.slice(0, 18)?.map((movie) => (
           <div key={movie?.id} className="col-span-1 md:col-span-1 mr-[15px]">
             <MoviePoster
               imageUrl={movie?.poster_path}

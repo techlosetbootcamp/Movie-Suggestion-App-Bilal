@@ -20,7 +20,7 @@ export default function Trending() {
         Trending
       </h1>
       <div className="grid grid-cols-12 gap-4 mr-[15px] ">
-        {movies.slice(0, 4)?.map((movie) => (
+        {movies?.slice(0, 4)?.map((movie) => (
           <div key={movie?.id} className="col-span-6 sm:col-span-3">
             <MoviePoster
               imageUrl={movie?.poster_path}

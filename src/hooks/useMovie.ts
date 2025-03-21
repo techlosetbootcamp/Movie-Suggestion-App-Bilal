@@ -3,8 +3,8 @@ import { Movie, Season } from "../types/types";
 import instance from "../utils/instance";
 
 const useMovies = () => {
-  const [movies, setMovies] = useState<Movie[]>([]);
-  const [seasons, setSeasons] = useState<Season[]>([]);
+  const [movies, setMovies] = useState<Movie[] | null>(null);
+  const [seasons, setSeasons] = useState<Season[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -14,8 +14,8 @@ const useMovies = () => {
         instance.get("/movie/popular"),
         instance.get("/tv/popular"),
       ]);
-      setMovies(moviesResponse.data?.results);
-      setSeasons(seasonsResponse.data?.results);
+      setMovies(moviesResponse.data?.results ?? null);
+      setSeasons(seasonsResponse.data?.results ?? null);
       setLoading(false);
     } catch {
       setError("Failed to fetch movies and TV shows");

@@ -32,7 +32,7 @@ export function useSearchMovies(): {
         console.error("Error in searchMovies dispatch:", error);
       });
     }
-  }, [dispatch, query]);
+  }, [query]);
 
   return { query, setQuery, searches, isLoading };
 }
