@@ -6,11 +6,13 @@ const SeasonPoster: React.FC<SeasonPosterProps> = ({
   name,
   rating,
 }) => {
+  const imageBaseUrl = import.meta.env.VITE_IMAGE_BASE_URL;
+  
   return (
     <>
       <div className="relative rounded-tl-lg rounded-tr-lg cursor-pointer overflow-hidden transition-transform transform-gpu duration-0 mb-5 hover:scale-105">
         <img
-          src={`https://image.tmdb.org/t/p/original/${imageUrl}`}
+          src={`${imageBaseUrl}/${imageUrl}`}
           alt="Season Poster"
           className="rounded-[20px] shrink-0 w-[305px] h-[202px] object-cover"
         />

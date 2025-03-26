@@ -1,7 +1,7 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import moviesSlice from "./slice/movieSlice";
-import searchSlice from "./slice/searchSlice";
-import seasonSlice from "./slice/seasonsSlice";
+import moviesSlice from "./slices/movieSlice";
+import searchSlice from "./slices/searchSlice";
+import seasonSlice from "./slices/seasonsSlice";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 const rootReducer = combineReducers({
   movies: moviesSlice.reducer,

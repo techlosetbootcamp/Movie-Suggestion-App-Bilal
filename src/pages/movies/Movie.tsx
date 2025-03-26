@@ -7,7 +7,7 @@ export default function Movie() {
   const { loading } = useMovies();
 
   return (
-    <div className="">
+    <div>
       {loading ? (
         <Loader />
       ) : (

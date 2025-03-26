@@ -4,6 +4,7 @@ import Loader from "../loader/Loader";
 
 export default function Seasons() {
   const { seasons, loading, error } = useMovies();
+
   if (loading) {
     return (
       <div>
@@ -11,9 +12,14 @@ export default function Seasons() {
       </div>
     );
   }
+
   if (error) {
     return <div>Error: {error}</div>;
   }
+
+  const imageBaseUrl =
+    import.meta.env.VITE_SEASON_BASE_URL;
+
   return (
     <>
       <div className="container md:my-2 mx-auto py-4 mt-[280px]">
@@ -36,7 +42,7 @@ export default function Seasons() {
           {seasons?.slice(0, 20)?.map((season) => (
             <div key={season.id}>
               <SeasonPoster
-                imageUrl={`https://image.tmdb.org/t/p/w500${season?.poster_path}`}
+                imageUrl={`${imageBaseUrl}/w500${season?.poster_path}`}
                 movieId={season?.id}
                 rating={season?.vote_average}
                 name={season?.name}

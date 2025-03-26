@@ -4,9 +4,9 @@ import {
   searchMovies,
   selectAllSearch,
   selectIsLoading,
-} from "../redux/slice/searchSlice";
+} from "../store/slices/searchSlice";
 import { Movie } from "../types/types";
-import { useAppDispatch, useAppSelector } from "../redux/store";
+import { useAppDispatch, useAppSelector } from "../store/store";
 
 export function useSearchMovies(): {
   query: string;

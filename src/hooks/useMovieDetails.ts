@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { selectAllMovies, selectIsLoading } from "../redux/slice/movieSlice";
-import { selectAllSearch } from "../redux/slice/searchSlice";
+import { selectAllMovies, selectIsLoading } from "../store/slices/movieSlice";
+import { selectAllSearch } from "../store/slices/searchSlice";
 import { Movie } from "../types/types";
 import instance from "../utils/instance";
-import { useAppSelector } from "../redux/store";
+import { useAppSelector } from "../store/store";
 
 export function useMovieDetails(): {
   movieData: Movie | null;

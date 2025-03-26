@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/home/Home";
 import Search from "../pages/search/Search";
 import Movie from "../pages/movies/Movie";
-import { searchMovies } from "../redux/slice/searchSlice";
+import { searchMovies } from "../store/slices/searchSlice";
 import Navbar from "../components/navbar/Navbar";
-import { useAppDispatch } from "../redux/store";
+import { useAppDispatch } from "../store/store";
 
 function AppRoutes() {
   const dispatch = useAppDispatch();

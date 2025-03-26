@@ -17,13 +17,13 @@ const Search = () => {
             </h1>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {searches.length > 0 ? (
+            {searches?.length > 0 ? (
               searches?.map((search) => (
                 <div key={search.id} className="relative">
                   <MoviePoster
-                    imageUrl={search.poster_path}
-                    movieId={search.id}
-                    rating={search.vote_average}
+                    imageUrl={search?.poster_path}
+                    movieId={search?.id}
+                    rating={search?.vote_average}
                   />
                 </div>
               ))

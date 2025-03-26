@@ -1,9 +1,8 @@
 import React from "react";
 import { useSearch } from "../../hooks/useSearch";
 import { NavbarProps } from "../../types/types";
-import BookmarkIcon from "../../assets/icons/Bookmark.png";
+import Icon from "../../assets/icons/bookmark.png";
 import { Plus, Search } from "lucide-react";
-
 const Navbar: React.FC<NavbarProps> = ({
   searchPlaceholder = " Search movies or series",
   showPlusButton,
@@ -46,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({
         </button>
         {showPlusButton && (
           <button className="bg-gray-300 h-10 w-10 flex items-center justify-center rounded-full focus:outline-none">
-            <img src={BookmarkIcon} className="w-6" alt="Bookmark Icon" />
+            <img src={Icon} className="w-6" alt="Bookmark Icon" />
           </button>
         )}
       </div>
