@@ -1,7 +1,8 @@
 import Loader from "../../components/loader/Loader";
-import Icon from "../../assets/icons/bookmark.png";
+import Icon from "../../assets/icons/bookMark.png";
 import { useMovieDetails } from "../../hooks/useMovieDetails";
 import { Star } from "lucide-react";
+import { IMAGE_BASE_URL } from "../../constants/constant";
 
 export default function MovieDetails() {
   const { movieData, isLoading } = useMovieDetails();
@@ -14,7 +15,6 @@ export default function MovieDetails() {
     return <div>Movie data not found</div>;
   }
 
-  const imageBaseUrl = import.meta.env.VITE_IMAGE_BASE_URL;
 
   return (
     <div className="container lg:ml-[80px] input:ml-[20px] mt-[30px] bg-gray">
@@ -51,7 +51,7 @@ export default function MovieDetails() {
             <div className="md:w-[196px] w-[98px] relative md:top-0 md:left-0 top-[55px] left-8">
               <img
                 className="lg:w-[196px] lg:h-[291px] sm:w-[98px] sm:h-[146px] md:w-[196px] md:h-[98px] input:mt-[15px] rounded-[20px]"
-                src={`${imageBaseUrl}/${movieData?.poster_path}`}
+                src={`${IMAGE_BASE_URL}/${movieData?.poster_path}`}
                 alt="Movie Poster"
               />
             </div>
@@ -81,7 +81,7 @@ export default function MovieDetails() {
             <div className="input:mr-[20px]">
               <img
                 className="sm:h-[146px] lg:w-[521px] lg:h-[291px] rounded-[20px] lg:ml-[100px]"
-                src={`${imageBaseUrl}/${movieData?.backdrop_path}`}
+                src={`${IMAGE_BASE_URL}/${movieData?.backdrop_path}`}
                 alt="Movie Scene"
               />
             </div>

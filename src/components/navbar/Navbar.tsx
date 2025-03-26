@@ -1,7 +1,7 @@
 import React from "react";
 import { useSearch } from "../../hooks/useSearch";
 import { NavbarProps } from "../../types/types";
-import Icon from "../../assets/icons/bookmark.png";
+import Icon from "../../assets/icons/bookMark.png";
 import { Plus, Search } from "lucide-react";
 const Navbar: React.FC<NavbarProps> = ({
   searchPlaceholder = " Search movies or series",

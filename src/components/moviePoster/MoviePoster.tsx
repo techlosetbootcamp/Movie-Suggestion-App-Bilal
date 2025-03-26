@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { MoviePosterProps } from "../../types/types";
 import { Star } from "lucide-react";
+import { IMAGE_BASE_URL } from "../../constants/constant";
 
 const MoviePoster: React.FC<MoviePosterProps> = ({
   imageUrl,
@@ -13,17 +14,13 @@ const MoviePoster: React.FC<MoviePosterProps> = ({
     navigate(`/movie/${movieId}`);
   };
 
-  // Use Vite's environment variable API.
-  const imageBaseUrl =
-    import.meta.env.VITE_IMAGE_BASE_URL;
-
   return (
     <div
       className="relative rounded-md cursor-pointer overflow-hidden transition-transform transform-gpu hover:scale-105"
       onClick={handleClick}
     >
       <img
-        src={`${imageBaseUrl}/${imageUrl}`}
+        src={`${IMAGE_BASE_URL}/${imageUrl}`}
         alt="Movie Poster"
         className="rounded-[20px] shrink-0 w-[200px] h-[263px]"
       />
